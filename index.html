@@ -1,326 +1,704 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab3D AI | AI-Powered Science & 3D Interactive Platform</title>
-    <!-- Tailwind CSS for rapid, futuristic styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Three.js for 3D Models Rendering -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <style>
-        body {
-            background-color: #07090e;
-            color: #f3f4f6;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        }
-        .neon-glow {
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
-        }
-        .neon-border {
-            border: 1px solid rgba(59, 130, 246, 0.3);
-        }
-        /* Custom Scrollbar for sleek UI */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b0f19;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3b82f6;
-        }
-    </style>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="مصادر وأصول مجانية ومفتوحة المصدر لمشروع Lab3D AI">
+
+  <title>المصادر | Lab3D AI</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
-    <!-- Header & Navigation -->
-    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-emerald-500 flex items-center justify-center font-bold text-xl neon-glow">
-                    3D
-                </div>
-                <h1 class="text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400 bg-clip-text text-transparent">
-                    Lab3D <span class="text-blue-500">AI</span>
-                </h1>
-            </div>
-            <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-                <a href="#ai-hub" class="hover:text-blue-400 transition-colors">AI Tutor</a>
-                <a href="#biology" class="hover:text-emerald-400 transition-colors">Biology</a>
-                <a href="#physics" class="hover:text-blue-400 transition-colors">Physics</a>
-                <a href="#chemistry" class="hover:text-purple-400 transition-colors">Chemistry</a>
-                <a href="#downloads" class="hover:text-amber-400 transition-colors">Library & Downloads</a>
-            </nav>
-            <div class="flex items-center gap-3">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-2"></span> System Online
-                </span>
-            </div>
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+
+    <div class="container navbar-inner">
+
+      <a href="index.html" class="logo">
+        Lab3D <span>AI</span>
+      </a>
+
+      <button
+        id="mobileMenuBtn"
+        class="mobile-menu-btn"
+        aria-label="فتح القائمة">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav">
+
+        <a href="index.html">
+          الرئيسية
+        </a>
+
+        <a href="biology.html">
+          الأحياء
+        </a>
+
+        <a href="chemistry.html">
+          الكيمياء
+        </a>
+
+        <a href="physics.html">
+          الفيزياء
+        </a>
+
+        <a href="sources.html" class="active">
+          المصادر
+        </a>
+
+        <a href="profile.html">
+          حسابي
+        </a>
+
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          id="themeToggle"
+          class="icon-btn"
+          aria-label="تغيير المظهر">
+          🌙
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="badge">
+            📚 مصادر مجانية
+          </span>
+
+          <h1>
+            مصادر علمية
+            <span>مفتوحة ومجانية</span>
+          </h1>
+
+          <p>
+            مجموعة من المصادر والأدوات التي يمكن
+            استخدامها لتطوير المحتوى والنماذج
+            التعليمية في Lab3D AI.
+          </p>
+
         </div>
-    </header>
 
-    <!-- Main Workspace Container -->
-    <main class="container mx-auto px-4 py-8 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
-        <!-- Left Column: AI Specialized Chat Interface (4 Cols) -->
-        <section class="lg:col-span-4 bg-slate-900/90 neon-border rounded-2xl p-5 flex flex-col h-[650px] neon-glow">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-3 mb-4">
-                <h2 class="text-base font-bold text-blue-400 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round5" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    AI Science Core
-                </h2>
-                <span class="text-xs bg-blue-950 text-blue-300 px-2.5 py-1 rounded-md border border-blue-800/50">Chem • Phys • Bio</span>
-            </div>
-            
-            <!-- Chat Messages Log -->
-            <div id="chat-messages" class="flex-grow overflow-y-auto space-y-4 mb-4 text-sm pr-1">
-                <div class="bg-slate-800/80 border border-slate-700/50 p-3.5 rounded-2xl max-w-[90%] text-slate-200">
-                    Welcome to <strong>Lab3D AI</strong>! I am your specialized AI instructor for Chemistry, Physics, and Biology. Ask me anything, and I will explain it in detail while triggering matching 3D models!
-                </div>
-            </div>
+      </div>
 
-            <!-- Input Box -->
-            <div class="flex gap-2 pt-2 border-t border-slate-800">
-                <input type="text" id="user-input" placeholder="Ask about DNA, Atomic Structure, Gravity..." class="flex-grow bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-slate-100 placeholder-slate-500 transition-colors">
-                <button onclick="sendMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20">Send</button>
-            </div>
-        </section>
-
-        <!-- Right Column: 3D Visualizer & Detailed Explanation Hub (8 Cols) -->
-        <section class="lg:col-span-8 bg-slate-900/90 neon-border rounded-2xl p-5 flex flex-col justify-between h-[650px] neon-glow">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                <h2 class="text-base font-bold text-emerald-400 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round5" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5"></path></svg>
-                    Interactive 3D Visualizer & Deep Explanation
-                </h2>
-                <div class="flex gap-2 text-xs">
-                    <button onclick="loadModel('atom')" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-colors">Chemistry (Atom)</button>
-                    <button onclick="loadModel('cell')" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition-colors">Biology (Cell)</button>
-                </div>
-            </div>
-
-            <!-- Canvas Container for 3D Graphics -->
-            <div id="canvas-container" class="relative flex-grow flex items-center justify-center bg-slate-950 rounded-xl my-4 border border-slate-800 overflow-hidden">
-                <!-- Fallback / Initial State text -->
-                <div id="canvas-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 text-center p-6">
-                    <svg class="w-12 h-12 mb-3 text-slate-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round5" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                    <p class="text-sm font-medium text-slate-400">Select a topic or ask the AI to load an interactive 3D model.</p>
-                </div>
-            </div>
-
-            <!-- AI Legal Disclaimer Banner -->
-            <div class="bg-slate-950/80 p-3 rounded-xl text-xs text-amber-400/90 border border-amber-500/20 flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round5" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                <div>
-                    <strong>Disclaimer:</strong> All information and explanations provided on this platform are generated via Artificial Intelligence. Users must cross-verify critical academic data before relying on it for official research or studies.
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Download & Resources Section with Mandatory Ad Watch Simulation -->
-    <section id="downloads" class="container mx-auto px-4 py-8 border-t border-slate-800">
-        <div class="bg-slate-900/60 neon-border rounded-2xl p-6">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div>
-                    <h3 class="text-xl font-bold text-slate-100">Free Open-Source Science Library</h3>
-                    <p class="text-sm text-slate-400 mt-1">Download copyright-free books, study summaries, and lab guides across all disciplines.</p>
-                </div>
-                <div class="mt-4 md:mt-0 px-4 py-2 bg-blue-600/10 text-blue-400 rounded-xl text-xs border border-blue-500/20 font-medium">
-                    Ad-Supported Free Access
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Item 1 -->
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex justify-between items-center">
-                    <div>
-                        <h4 class="text-sm font-semibold text-slate-200">Biology Comprehensive Guide</h4>
-                        <span class="text-xs text-slate-500">PDF • 14.2 MB • Free</span>
-                    </div>
-                    <button onclick="triggerRewardedDownload('Biology Guide')" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg text-xs font-semibold transition-all">Download</button>
-                </div>
-                <!-- Item 2 -->
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex justify-between items-center">
-                    <div>
-                        <h4 class="text-sm font-semibold text-slate-200">Advanced Physics Formulas</h4>
-                        <span class="text-xs text-slate-500">PDF • 8.5 MB • Free</span>
-                    </div>
-                    <button onclick="triggerRewardedDownload('Physics Formulas')" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg text-xs font-semibold transition-all">Download</button>
-                </div>
-                <!-- Item 3 -->
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex justify-between items-center">
-                    <div>
-                        <h4 class="text-sm font-semibold text-slate-200">Organic Chemistry Core</h4>
-                        <span class="text-xs text-slate-500">PDF • 19.1 MB • Free</span>
-                    </div>
-                    <button onclick="triggerRewardedDownload('Chemistry Core')" class="bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white px-4 py-2 rounded-lg text-xs font-semibold transition-all">Download</button>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 text-center py-6 text-xs text-slate-500">
-        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>© 2026 Lab3D AI. Powered by GitHub & Cloudflare Edge Network.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-slate-300 transition-colors">Contact</a>
-            </div>
+
+    <!-- =========================
+         NOTICE
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="ai-warning">
+
+          <div class="ai-warning-icon">
+            ℹ️
+          </div>
+
+          <div>
+
+            <h3>
+              ملاحظة مهمة حول التراخيص
+            </h3>
+
+            <p>
+              قبل استخدام أي صورة أو نموذج أو ملف
+              في مشروعك، تحقق دائمًا من الترخيص
+              وشروط الاستخدام الخاصة بالمصدر.
+              كلمة "مجاني" لا تعني بالضرورة أن
+              جميع الاستخدامات التجارية مسموحة.
+            </p>
+
+          </div>
+
         </div>
-    </footer>
 
-    <!-- JavaScript Application Logic -->
-    <script>
-        // --- 1. AI Chat Handler ---
-        function sendMessage() {
-            const input = document.getElementById('user-input');
-            const chatMessages = document.getElementById('chat-messages');
-            const query = input.value.trim();
-            
-            if(!query) return;
+      </div>
 
-            // Append User Message
-            chatMessages.innerHTML += `
-                <div class="bg-blue-600/20 border border-blue-500/30 p-3.5 rounded-2xl max-w-[90%] ml-auto text-slate-100 text-sm">
-                    ${escapeHtml(query)}
-                </div>`;
-            input.value = '';
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+    </section>
 
-            // Simulate AI Processing & Response
-            setTimeout(() => {
-                let aiReply = `Analyzing your query regarding "${escapeHtml(query)}" across Chemistry, Physics, and Biology databases...`;
-                if(query.toLowerCase().includes('atom') || query.toLowerCase().includes('chemistry')) {
-                    aiReply = "Loading Atomic structure 3D model. Atoms consist of a dense nucleus surrounded by electrons.";
-                    loadModel('atom');
-                } else if(query.toLowerCase().includes('cell') || query.toLowerCase().includes('biology')) {
-                    aiReply = "Loading Cell structure 3D model. Cells are the basic structural and functional units of all organisms.";
-                    loadModel('cell');
-                }
 
-                chatMessages.innerHTML += `
-                    <div class="bg-slate-800/80 border border-slate-700/50 p-3.5 rounded-2xl max-w-[90%] text-slate-200 text-sm">
-                        ${aiReply}
-                    </div>`;
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 700);
-        }
+    <!-- =========================
+         SOURCES
+    ========================== -->
 
-        // Allow 'Enter' key to send message
-        document.getElementById('user-input').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
+    <section class="section section-alt">
 
-        // --- 2. Three.js Interactive 3D Visualizer Setup ---
-        let scene, camera, renderer, currentMesh;
+      <div class="container">
 
-        function init3DViewer() {
-            const container = document.getElementById('canvas-container');
-            
-            scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-            
-            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-            renderer.setSize(container.clientWidth, container.clientHeight);
-            renderer.setPixelRatio(window.devicePixelRatio);
-            
-            // Clear previous canvas if any
-            const oldCanvas = container.querySelector('canvas');
-            if(oldCanvas) oldCanvas.remove();
-            
-            container.appendChild(renderer.domElement);
+        <div class="section-heading">
 
-            // Lighting
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-            scene.add(ambientLight);
-            const pointLight = new THREE.PointLight(0x3b82f6, 2);
-            pointLight.position.set(5, 5, 5);
-            scene.add(pointLight);
+          <span class="section-kicker">
+            Open Source
+          </span>
 
-            camera.position.z = 5;
+          <h2>
+            مصادر وأدوات مفيدة
+          </h2>
 
-            // Resize listener
-            window.addEventListener('resize', onWindowResize, false);
-            animate();
-        }
+          <p>
+            مصادر يمكن الرجوع إليها عند بناء
+            النماذج والمحتوى العلمي.
+          </p>
 
-        function animate() {
-            requestAnimationFrame(animate);
-            if (currentMesh) {
-                currentMesh.rotation.x += 0.005;
-                currentMesh.rotation.y += 0.008;
-            }
-            if(renderer && scene && camera) {
-                renderer.render(scene, camera);
-            }
-        }
+        </div>
 
-        function onWindowResize() {
-            const container = document.getElementById('canvas-container');
-            if(!container) return;
-            camera.aspect = container.clientWidth / container.clientHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(container.clientWidth, container.clientHeight);
-        }
 
-        function loadModel(type) {
-            const placeholder = document.getElementById('canvas-placeholder');
-            if(placeholder) placeholder.style.display = 'none';
+        <div class="model-grid">
 
-            if(!scene) {
-                init3DViewer();
-            }
 
-            if(currentMesh) {
-                scene.remove(currentMesh);
-            }
+          <!-- Three.js -->
 
-            if(type === 'atom') {
-                // Chemistry Atom Simulation (Sphere + Orbit rings)
-                const geometry = new THREE.SphereGeometry(0.8, 32, 32);
-                const material = new THREE.MeshStandardMaterial({ color: 0x3b82f6, roughness: 0.3, metalness: 0.8 });
-                currentMesh = new THREE.Mesh(geometry, material);
-            } else if(type === 'cell') {
-                // Biology Cell Simulation (Icosahedron)
-                const geometry = new THREE.IcosahedronGeometry(1, 1);
-                const material = new THREE.MeshStandardMaterial({ color: 0x10b981, wireframe: true });
-                currentMesh = new THREE.Mesh(geometry, material);
-            }
+          <article class="model-card">
 
-            scene.add(currentMesh);
-        }
+            <div class="model-card-icon">
+              🧊
+            </div>
 
-        // --- 3. Rewarded Ad Download Simulation ---
-        function triggerRewardedDownload(fileName) {
-            alert(`[AdSense / Rewarded Ad Integration]\n\nPlease watch a short sponsored message to unlock your free download for: "${fileName}".`);
-            setTimeout(() => {
-                alert(`Ad completed successfully! Downloading "${fileName}" now...`);
-            }, 1000);
-        }
+            <span class="model-tag">
+              3D
+            </span>
 
-        // Utility to prevent XSS in chat
-        function escapeHtml(text) {
-            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-        }
+            <h3>
+              Three.js
+            </h3>
 
-        // Initialize 3D view on load placeholder check
-        window.addEventListener('DOMContentLoaded', () => {
-            // Auto load initial atom model to showcase the 3D visualizer instantly
-            setTimeout(() => {
-                loadModel('atom');
-            }, 500);
-        });
-    </script>
+            <p>
+              مكتبة JavaScript لإنشاء الرسومات
+              والنماذج ثلاثية الأبعاد باستخدام WebGL.
+            </p>
+
+            <a
+              href="https://threejs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- MDN -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              💻
+            </div>
+
+            <span class="model-tag">
+              Web
+            </span>
+
+            <h3>
+              MDN Web Docs
+            </h3>
+
+            <p>
+              مرجع شامل لتقنيات HTML وCSS وJavaScript
+              وتقنيات الويب الحديثة.
+            </p>
+
+            <a
+              href="https://developer.mozilla.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- Wikimedia -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🖼️
+            </div>
+
+            <span class="model-tag">
+              Media
+            </span>
+
+            <h3>
+              Wikimedia Commons
+            </h3>
+
+            <p>
+              مستودع ضخم للصور والوسائط التي تحمل
+              تراخيص مختلفة.
+            </p>
+
+            <a
+              href="https://commons.wikimedia.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- OpenStax -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              📖
+            </div>
+
+            <span class="model-tag">
+              Education
+            </span>
+
+            <h3>
+              OpenStax
+            </h3>
+
+            <p>
+              كتب تعليمية مفتوحة في العلوم والرياضيات
+              وغيرها من المجالات التعليمية.
+            </p>
+
+            <a
+              href="https://openstax.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- PhET -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              ⚡
+            </div>
+
+            <span class="model-tag">
+              Physics
+            </span>
+
+            <h3>
+              PhET Interactive Simulations
+            </h3>
+
+            <p>
+              محاكاة تفاعلية تعليمية في الفيزياء
+              والكيمياء وغيرها من العلوم.
+            </p>
+
+            <a
+              href="https://phet.colorado.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- PubChem -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              ⚗️
+            </div>
+
+            <span class="model-tag">
+              Chemistry
+            </span>
+
+            <h3>
+              PubChem
+            </h3>
+
+            <p>
+              قاعدة بيانات علمية للمعلومات المتعلقة
+              بالمواد والمركبات الكيميائية.
+            </p>
+
+            <a
+              href="https://pubchem.ncbi.nlm.nih.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- NCBI -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🧬
+            </div>
+
+            <span class="model-tag">
+              Biology
+            </span>
+
+            <h3>
+              NCBI
+            </h3>
+
+            <p>
+              موارد وقواعد بيانات علمية متخصصة
+              في الأحياء والطب والعلوم الحيوية.
+            </p>
+
+            <a
+              href="https://www.ncbi.nlm.nih.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+          <!-- NASA -->
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🚀
+            </div>
+
+            <span class="model-tag">
+              Space
+            </span>
+
+            <h3>
+              NASA
+            </h3>
+
+            <p>
+              موارد وصور وبيانات تعليمية مرتبطة
+              بالفضاء والفيزياء وعلوم الأرض.
+            </p>
+
+            <a
+              href="https://www.nasa.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
+              زيارة المصدر
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LICENSE GUIDE
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            التراخيص
+          </span>
+
+          <h2>
+            انتبه إلى نوع الترخيص
+          </h2>
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              ✅
+            </div>
+
+            <h3>
+              Public Domain
+            </h3>
+
+            <p>
+              قد تكون المواد الموجودة في الملكية العامة
+              قابلة للاستخدام دون قيود حقوق نشر،
+              مع ضرورة التحقق من المصدر.
+            </p>
+
+          </article>
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              📜
+            </div>
+
+            <h3>
+              Creative Commons
+            </h3>
+
+            <p>
+              تراخيص Creative Commons لها شروط
+              مختلفة، مثل ذكر صاحب العمل أو
+              منع الاستخدام التجاري.
+            </p>
+
+          </article>
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              💡
+            </div>
+
+            <h3>
+              Open Source
+            </h3>
+
+            <p>
+              البرمجيات مفتوحة المصدر قد تسمح
+              بالتعديل وإعادة الاستخدام وفقًا
+              للرخصة المحددة للمشروع.
+            </p>
+
+          </article>
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              ⚠️
+            </div>
+
+            <h3>
+              تحقق قبل الاستخدام
+            </h3>
+
+            <p>
+              راجع دائمًا صفحة الترخيص الأصلية
+              قبل استخدام أي محتوى في موقع
+              تجاري أو ربحي.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTRIBUTION
+    ========================== -->
+
+    <section class="section section-alt">
+
+      <div class="container">
+
+        <div class="cta-card">
+
+          <span class="badge">
+            🧪 Lab3D AI
+          </span>
+
+          <h2>
+            العلم أفضل عندما يكون متاحًا للجميع
+          </h2>
+
+          <p>
+            نهدف إلى جمع مصادر تعليمية وأدوات
+            مفتوحة تساعد على جعل تعلم العلوم
+            أكثر تفاعلية وسهولة.
+          </p>
+
+          <a
+            href="index.html"
+            class="btn btn-primary">
+
+            العودة إلى المختبر
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <a href="index.html" class="logo">
+            Lab3D <span>AI</span>
+          </a>
+
+          <p>
+            مختبر تعليمي تفاعلي لاستكشاف
+            العلوم باستخدام الذكاء الاصطناعي
+            والنماذج ثلاثية الأبعاد.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            الأقسام
+          </h3>
+
+          <a href="biology.html">
+            الأحياء
+          </a>
+
+          <a href="chemistry.html">
+            الكيمياء
+          </a>
+
+          <a href="physics.html">
+            الفيزياء
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            الموقع
+          </h3>
+
+          <a href="index.html">
+            الرئيسية
+          </a>
+
+          <a href="profile.html">
+            حسابي
+          </a>
+
+          <a href="privacy.html">
+            سياسة الخصوصية
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Lab3D AI
+        </span>
+
+        <span>
+          تعليم • علوم • ذكاء اصطناعي
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       SCRIPTS
+  ========================== -->
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
-  </html>
+                </html>
