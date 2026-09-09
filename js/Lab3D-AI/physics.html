@@ -1,722 +1,545 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Lab3D AI - مختبر الفيزياء التفاعلي ثلاثي الأبعاد">
-
-  <title>الفيزياء | Lab3D AI</title>
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-  <!-- =========================
-       NAVBAR
-  ========================== -->
-  <header class="navbar">
-
-    <div class="container navbar-inner">
-
-      <a href="index.html" class="logo">
-        Lab3D <span>AI</span>
-      </a>
-
-      <button
-        id="mobileMenuBtn"
-        class="mobile-menu-btn"
-        aria-label="فتح القائمة">
-        ☰
-      </button>
-
-      <nav id="mainNav" class="main-nav">
-
-        <a href="index.html">الرئيسية</a>
-
-        <a href="biology.html">الأحياء</a>
-
-        <a href="chemistry.html">الكيمياء</a>
-
-        <a href="physics.html" class="active">
-          الفيزياء
-        </a>
-
-        <a href="sources.html">المصادر</a>
-
-        <a href="profile.html">حسابي</a>
-
-      </nav>
-
-      <div class="navbar-actions">
-
-        <button
-          id="themeToggle"
-          class="icon-btn"
-          aria-label="تغيير المظهر">
-          🌙
-        </button>
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-  <!-- =========================
-       HERO
-  ========================== -->
-  <main>
-
-    <section class="hero subject-hero">
-
-      <div class="container">
-
-        <div class="hero-content">
-
-          <span class="badge">
-            ⚡ مختبر الفيزياء
-          </span>
-
-          <h1>
-            اكتشف قوانين الفيزياء
-            <span>بتجربة ثلاثية الأبعاد</span>
-          </h1>
-
-          <p>
-            استكشف الحركة والجاذبية والمدارات والموجات
-            والظواهر الفيزيائية من خلال نماذج تفاعلية.
-          </p>
-
-          <div class="hero-actions">
-
-            <a
-              href="#physicsLab"
-              class="btn btn-primary">
-              🧪 ابدأ التجربة
-            </a>
-
-            <button
-              class="btn btn-secondary"
-              onclick="openModal('aiModal')">
-              🤖 اسأل AI Mentor
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         AD
-    ========================== -->
-    <section class="ad-section">
-
-      <div class="container">
-
-        <div
-          class="ad-placeholder"
-          data-ad-network="google"
-          data-ad-slot="physics-top">
-
-          <span>إعلان</span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         3D LAB
-    ========================== -->
-    <section
-      id="physicsLab"
-      class="section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            تجربة تفاعلية
-          </span>
-
-          <h2>
-            نموذج المدار والجاذبية
-          </h2>
-
-          <p>
-            حرّك النموذج وشاهد العلاقة بين الكتلة
-            والجاذبية والحركة المدارية.
-          </p>
-
-        </div>
-
-
-        <div class="model-viewer-card">
-
-          <div class="model-viewer-header">
-
-            <div>
-
-              <span class="model-category">
-                ⚡ Physics
-              </span>
-
-              <h3>
-                نظام مداري ثلاثي الأبعاد
-              </h3>
-
-            </div>
-
-            <span class="model-status">
-              ● تفاعلي
-            </span>
-
-          </div>
-
-
-          <div class="canvas-wrapper">
-
-            <canvas id="physicsCanvas"></canvas>
-
-            <div class="canvas-overlay">
-
-              <span>
-                اسحب للدوران
-              </span>
-
-              <span>
-                استخدم العجلة للتكبير
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="model-controls">
-
-            <button
-              id="physicsRotateToggle"
-              class="btn btn-secondary">
-              ⏸ إيقاف الدوران
-            </button>
-
-            <button
-              id="physicsReset"
-              class="btn btn-secondary">
-              🔄 إعادة ضبط
-            </button>
-
-            <button
-              id="savePhysicsModel"
-              class="btn btn-primary">
-              ⭐ حفظ النموذج
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         INFORMATION
-    ========================== -->
-    <section class="section section-alt">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            معلومات النموذج
-          </span>
-
-          <h2>
-            كيف يعمل المدار؟
-          </h2>
-
-        </div>
-
-
-        <div class="info-grid">
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              🌍
-            </div>
-
-            <h3>
-              الجاذبية
-            </h3>
-
-            <p>
-              الجاذبية قوة تجذب الأجسام ذات الكتلة
-              نحو بعضها البعض.
-            </p>
-
-          </article>
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              🛰️
-            </div>
-
-            <h3>
-              السرعة المدارية
-            </h3>
-
-            <p>
-              تعتمد حركة الجسم في المدار على سرعته
-              والمسافة عن الجسم المركزي.
-            </p>
-
-          </article>
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              ⚖️
-            </div>
-
-            <h3>
-              الكتلة
-            </h3>
-
-            <p>
-              كلما زادت كتلة الجسم زادت قوة الجاذبية
-              الناتجة عنه.
-            </p>
-
-          </article>
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              🔄
-            </div>
-
-            <h3>
-              الحركة
-            </h3>
-
-            <p>
-              المدار ينتج عن التوازن بين حركة الجسم
-              وقوة الجاذبية المؤثرة عليه.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PHYSICS LIBRARY
-    ========================== -->
-    <section class="section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            مكتبة الفيزياء
-          </span>
-
-          <h2>
-            نماذج فيزيائية تفاعلية
-          </h2>
-
-          <p>
-            مجموعة من النماذج التي يمكن إضافتها
-            إلى المختبر.
-          </p>
-
-        </div>
-
-
-        <div class="model-grid">
-
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🎯
-            </div>
-
-            <h3>
-              حركة المقذوفات
-            </h3>
-
-            <p>
-              دراسة المسار والسرعة وزاوية الإطلاق.
-            </p>
-
-            <span class="model-tag">
-              Mechanics
-            </span>
-
-          </article>
-
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🌌
-            </div>
-
-            <h3>
-              النظام الشمسي
-            </h3>
-
-            <p>
-              استكشاف حركة الكواكب حول الشمس.
-            </p>
-
-            <span class="model-tag">
-              Astronomy
-            </span>
-
-          </article>
-
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🌊
-            </div>
-
-            <h3>
-              الموجات
-            </h3>
-
-            <p>
-              فهم الطول الموجي والتردد والسعة.
-            </p>
-
-            <span class="model-tag">
-              Waves
-            </span>
-
-          </article>
-
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🧲
-            </div>
-
-            <h3>
-              المجال المغناطيسي
-            </h3>
-
-            <p>
-              مشاهدة خطوط المجال المغناطيسي
-              حول المغناطيس.
-            </p>
-
-            <span class="model-tag">
-              Magnetism
-            </span>
-
-          </article>
-
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              ⚛️
-            </div>
-
-            <h3>
-              الذرة
-            </h3>
-
-            <p>
-              نموذج مبسط للتعرف على مكونات الذرة.
-            </p>
-
-            <span class="model-tag">
-              Atomic Physics
-            </span>
-
-          </article>
-
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              ⏱️
-            </div>
-
-            <h3>
-              البندول
-            </h3>
-
-            <p>
-              دراسة الحركة الدورية وتأثير طول الخيط.
-            </p>
-
-            <span class="model-tag">
-              Motion
-            </span>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         AI WARNING
-    ========================== -->
-    <section class="section">
-
-      <div class="container">
-
-        <div class="ai-warning">
-
-          <div class="ai-warning-icon">
-            ⚠️
-          </div>
-
-          <div>
-
-            <h3>
-              تنبيه مهم
-            </h3>
-
-            <p>
-              قد تنتج أخطاء عن الذكاء الاصطناعي لأنه
-              يديره الذكاء، يرجى التأكد من المعلومات
-              قدر الإمكان عند استخدام أي معلومة من الموقع.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         AI MENTOR MODAL
-    ========================== -->
-    <div
-      id="aiModal"
-      class="modal"
-      aria-hidden="true">
-
-      <div class="modal-overlay"
-           onclick="closeModal('aiModal')">
-      </div>
-
-      <div class="modal-content">
-
-        <button
-          class="modal-close"
-          onclick="closeModal('aiModal')"
-          aria-label="إغلاق">
-          ×
-        </button>
-
-        <div class="modal-header">
-
-          <span class="modal-icon">
-            🤖
-          </span>
-
-          <div>
-
-            <h2>
-              AI Mentor
-            </h2>
-
-            <p>
-              مساعدك في فهم الفيزياء
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div
-          id="aiMessages"
-          class="ai-messages">
-
-          <div class="ai-message ai-message-bot">
-
-            مرحبًا! 👋
-
-            <br><br>
-
-            أنا AI Mentor الخاص بالفيزياء.
-            يمكنك سؤالي عن الحركة والجاذبية
-            والطاقة والموجات وغيرها.
-
-          </div>
-
-        </div>
-
-
-        <div class="ai-input-area">
-
-          <textarea
-            id="aiInput"
-            rows="3"
-            maxlength="2000"
-            placeholder="اكتب سؤالك في الفيزياء...">
-          </textarea>
-
-          <button
-            id="aiSendBtn"
-            class="btn btn-primary">
-            إرسال 🚀
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="footer">
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-
-          <a href="index.html" class="logo">
-            Lab3D <span>AI</span>
-          </a>
-
-          <p>
-            مختبر تعليمي تفاعلي لاستكشاف
-            العلوم باستخدام الذكاء الاصطناعي
-            والنماذج ثلاثية الأبعاد.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <h3>
-            الأقسام
-          </h3>
-
-          <a href="biology.html">
-            الأحياء
-          </a>
-
-          <a href="chemistry.html">
-            الكيمياء
-          </a>
-
-          <a href="physics.html">
-            الفيزياء
-          </a>
-
-        </div>
-
-
-        <div>
-
-          <h3>
-            الموقع
-          </h3>
-
-          <a href="sources.html">
-            المصادر
-          </a>
-
-          <a href="privacy.html">
-            سياسة الخصوصية
-          </a>
-
-          <a href="profile.html">
-            حسابي
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <span>
-          © 2026 Lab3D AI
-        </span>
-
-        <span>
-          تعليم • علوم • ذكاء اصطناعي
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================
-       SCRIPTS
-  ========================== -->
-
-  <script src="js/config.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/auth.js"></script>
-  <script src="js/ai.js"></script>
-  <script src="js/ads.js"></script>
-  <script src="js/models.js"></script>
-
-  <!-- Three.js -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-
-  <!-- Physics -->
-  <script src="js/physics.js"></script>
-
-</body>
-</html>
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("physicsCanvas");
+
+  if (!canvas || typeof THREE === "undefined") {
+    return;
+  }
+
+  // =========================
+  // Scene
+  // =========================
+  const scene = new THREE.Scene();
+
+  scene.background = new THREE.Color(0x07111f);
+
+  // =========================
+  // Camera
+  // =========================
+  const camera = new THREE.PerspectiveCamera(
+    45,
+    1,
+    0.1,
+    1000
+  );
+
+  camera.position.set(0, 7, 15);
+
+  // =========================
+  // Renderer
+  // =========================
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    antialias: true,
+    alpha: false
+  });
+
+  renderer.setPixelRatio(
+    Math.min(window.devicePixelRatio || 1, 2)
+  );
+
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+  // =========================
+  // Lights
+  // =========================
+  const ambientLight = new THREE.AmbientLight(
+    0xffffff,
+    1.4
+  );
+
+  scene.add(ambientLight);
+
+  const pointLight = new THREE.PointLight(
+    0xffffff,
+    2.5,
+    100
+  );
+
+  pointLight.position.set(0, 5, 5);
+
+  scene.add(pointLight);
+
+  // =========================
+  // Main Group
+  // =========================
+  const systemGroup = new THREE.Group();
+
+  scene.add(systemGroup);
+
+  // =========================
+  // Central Planet
+  // =========================
+  const planetGeometry =
+    new THREE.SphereGeometry(2.1, 48, 48);
+
+  const planetMaterial =
+    new THREE.MeshStandardMaterial({
+      color: 0x2277ff,
+      roughness: 0.55,
+      metalness: 0.15
+    });
+
+  const planet =
+    new THREE.Mesh(
+      planetGeometry,
+      planetMaterial
+    );
+
+  systemGroup.add(planet);
+
+  // =========================
+  // Planet Glow
+  // =========================
+  const glowGeometry =
+    new THREE.SphereGeometry(2.35, 32, 32);
+
+  const glowMaterial =
+    new THREE.MeshBasicMaterial({
+      color: 0x3388ff,
+      transparent: true,
+      opacity: 0.12,
+      side: THREE.BackSide
+    });
+
+  const glow =
+    new THREE.Mesh(
+      glowGeometry,
+      glowMaterial
+    );
+
+  systemGroup.add(glow);
+
+  // =========================
+  // Orbit
+  // =========================
+  const orbitRadius = 5.5;
+
+  const orbitCurve =
+    new THREE.EllipseCurve(
+      0,
+      0,
+      orbitRadius,
+      orbitRadius,
+      0,
+      Math.PI * 2,
+      false,
+      0
+    );
+
+  const orbitPoints =
+    orbitCurve.getPoints(128);
+
+  const orbitGeometry =
+    new THREE.BufferGeometry().setFromPoints(
+      orbitPoints.map(
+        point =>
+          new THREE.Vector3(
+            point.x,
+            0,
+            point.y
+          )
+      )
+    );
+
+  const orbitMaterial =
+    new THREE.LineBasicMaterial({
+      color: 0x66bbff,
+      transparent: true,
+      opacity: 0.55
+    });
+
+  const orbit =
+    new THREE.LineLoop(
+      orbitGeometry,
+      orbitMaterial
+    );
+
+  systemGroup.add(orbit);
+
+  // =========================
+  // Satellite
+  // =========================
+  const satelliteGroup =
+    new THREE.Group();
+
+  systemGroup.add(satelliteGroup);
+
+  const satelliteGeometry =
+    new THREE.SphereGeometry(
+      0.65,
+      32,
+      32
+    );
+
+  const satelliteMaterial =
+    new THREE.MeshStandardMaterial({
+      color: 0xffb52e,
+      roughness: 0.4,
+      metalness: 0.2
+    });
+
+  const satellite =
+    new THREE.Mesh(
+      satelliteGeometry,
+      satelliteMaterial
+    );
+
+  satellite.position.x = orbitRadius;
+
+  satelliteGroup.add(satellite);
+
+  // =========================
+  // Satellite Ring
+  // =========================
+  const ringGeometry =
+    new THREE.TorusGeometry(
+      0.95,
+      0.06,
+      12,
+      48
+    );
+
+  const ringMaterial =
+    new THREE.MeshBasicMaterial({
+      color: 0xffdd66
+    });
+
+  const satelliteRing =
+    new THREE.Mesh(
+      ringGeometry,
+      ringMaterial
+    );
+
+  satelliteRing.rotation.x =
+    Math.PI / 2;
+
+  satellite.add(satelliteRing);
+
+  // =========================
+  // Direction Indicator
+  // =========================
+  const arrowDirection =
+    new THREE.Vector3(1, 0, 0);
+
+  const arrowOrigin =
+    new THREE.Vector3(
+      orbitRadius,
+      0,
+      0
+    );
+
+  const arrow =
+    new THREE.ArrowHelper(
+      arrowDirection,
+      arrowOrigin,
+      2,
+      0xffffff,
+      0.45,
+      0.25
+    );
+
+  satelliteGroup.add(arrow);
+
+  // =========================
+  // Stars
+  // =========================
+  const starsGeometry =
+    new THREE.BufferGeometry();
+
+  const starPositions = [];
+
+  for (let i = 0; i < 500; i++) {
+
+    const x =
+      (Math.random() - 0.5) * 80;
+
+    const y =
+      (Math.random() - 0.5) * 60;
+
+    const z =
+      (Math.random() - 0.5) * 80;
+
+    starPositions.push(x, y, z);
+  }
+
+  starsGeometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(
+      starPositions,
+      3
+    )
+  );
+
+  const starsMaterial =
+    new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 0.08,
+      transparent: true,
+      opacity: 0.8
+    });
+
+  const stars =
+    new THREE.Points(
+      starsGeometry,
+      starsMaterial
+    );
+
+  scene.add(stars);
+
+  // =========================
+  // Controls
+  // =========================
+  let autoRotate = true;
+
+  let isDragging = false;
+
+  let previousX = 0;
+  let previousY = 0;
+
+  let rotationX = 0;
+  let rotationY = 0;
+
+  // =========================
+  // Pointer Down
+  // =========================
+  canvas.addEventListener(
+    "pointerdown",
+    event => {
+
+      isDragging = true;
+
+      previousX = event.clientX;
+      previousY = event.clientY;
+
+      canvas.setPointerCapture(
+        event.pointerId
+      );
+    }
+  );
+
+  // =========================
+  // Pointer Move
+  // =========================
+  canvas.addEventListener(
+    "pointermove",
+    event => {
+
+      if (!isDragging) {
+        return;
+      }
+
+      const deltaX =
+        event.clientX - previousX;
+
+      const deltaY =
+        event.clientY - previousY;
+
+      rotationY += deltaX * 0.01;
+
+      rotationX += deltaY * 0.01;
+
+      rotationX = Math.max(
+        -1.2,
+        Math.min(1.2, rotationX)
+      );
+
+      systemGroup.rotation.y =
+        rotationY;
+
+      systemGroup.rotation.x =
+        rotationX;
+
+      previousX = event.clientX;
+      previousY = event.clientY;
+    }
+  );
+
+  // =========================
+  // Pointer Up
+  // =========================
+  canvas.addEventListener(
+    "pointerup",
+    event => {
+
+      isDragging = false;
+
+      try {
+        canvas.releasePointerCapture(
+          event.pointerId
+        );
+      } catch (error) {}
+    }
+  );
+
+  canvas.addEventListener(
+    "pointercancel",
+    () => {
+      isDragging = false;
+    }
+  );
+
+  // =========================
+  // Zoom
+  // =========================
+  canvas.addEventListener(
+    "wheel",
+    event => {
+
+      event.preventDefault();
+
+      camera.position.z +=
+        event.deltaY * 0.01;
+
+      camera.position.z =
+        Math.max(
+          7,
+          Math.min(
+            25,
+            camera.position.z
+          )
+        );
+    },
+    { passive: false }
+  );
+
+  // =========================
+  // Reset
+  // =========================
+  const resetButton =
+    document.getElementById(
+      "physicsReset"
+    );
+
+  if (resetButton) {
+
+    resetButton.addEventListener(
+      "click",
+      () => {
+
+        rotationX = 0;
+        rotationY = 0;
+
+        systemGroup.rotation.set(
+          0,
+          0,
+          0
+        );
+
+        camera.position.set(
+          0,
+          7,
+          15
+        );
+      }
+    );
+  }
+
+  // =========================
+  // Rotation Toggle
+  // =========================
+  const rotateButton =
+    document.getElementById(
+      "physicsRotateToggle"
+    );
+
+  if (rotateButton) {
+
+    rotateButton.addEventListener(
+      "click",
+      () => {
+
+        autoRotate =
+          !autoRotate;
+
+        rotateButton.textContent =
+          autoRotate
+            ? "⏸ إيقاف الدوران"
+            : "▶ تشغيل الدوران";
+      }
+    );
+  }
+
+  // =========================
+  // Resize
+  // =========================
+  function resizeRenderer() {
+
+    const width =
+      canvas.clientWidth || 800;
+
+    const height =
+      canvas.clientHeight || 500;
+
+    renderer.setSize(
+      width,
+      height,
+      false
+    );
+
+    camera.aspect =
+      width / height;
+
+    camera.updateProjectionMatrix();
+  }
+
+  window.addEventListener(
+    "resize",
+    resizeRenderer
+  );
+
+  resizeRenderer();
+
+  // =========================
+  // Animation
+  // =========================
+  let previousTime =
+    performance.now();
+
+  function animate(currentTime) {
+
+    requestAnimationFrame(
+      animate
+    );
+
+    const delta =
+      Math.min(
+        (currentTime - previousTime) /
+          1000,
+        0.05
+      );
+
+    previousTime =
+      currentTime;
+
+    // حركة القمر حول الجسم المركزي
+    satelliteGroup.rotation.y +=
+      delta * 0.65;
+
+    // دوران الكوكب
+    planet.rotation.y +=
+      delta * 0.25;
+
+    // دوران الحلقة
+    satelliteRing.rotation.z +=
+      delta * 0.8;
+
+    // دوران تلقائي للمشهد
+    if (autoRotate && !isDragging) {
+
+      systemGroup.rotation.y +=
+        delta * 0.12;
+    }
+
+    stars.rotation.y +=
+      delta * 0.003;
+
+    renderer.render(
+      scene,
+      camera
+    );
+  }
+
+  animate(
+    performance.now()
+  );
+});
