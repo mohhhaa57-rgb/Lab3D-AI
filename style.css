@@ -1,0 +1,245 @@
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding-block: 45px;
+}
+
+.footer-brand {
+  max-width: 390px;
+}
+
+.footer-brand p {
+  margin-top: 15px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px 22px;
+}
+
+.footer-links a {
+  color: var(--text-soft);
+  font-size: 13px;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-block: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* =========================================================
+   Light Mode
+========================================================= */
+
+body.light-mode {
+  --bg: #f5f7ff;
+  --bg-soft: #ffffff;
+  --surface: rgba(255,255,255,0.85);
+  --surface-solid: #ffffff;
+
+  --border: rgba(70, 80, 130, 0.13);
+
+  --text: #11162b;
+  --text-soft: #555d77;
+  --text-muted: #7a8198;
+}
+
+body.light-mode .navbar {
+  background: rgba(245,247,255,0.82);
+}
+
+body.light-mode .subject-card,
+body.light-mode .feature-card,
+body.light-mode .ai-card {
+  background: rgba(255,255,255,0.72);
+}
+
+body.light-mode .modal-box {
+  background: #ffffff;
+}
+
+body.light-mode .footer {
+  background: rgba(245,247,255,0.8);
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 980px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-card {
+    min-height: 280px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-card {
+    grid-template-columns: 1fr;
+    padding: 38px;
+  }
+
+  .ai-visual {
+    min-height: 230px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .container {
+    width: min(
+      calc(100% - 26px),
+      var(--container)
+    );
+  }
+
+  .nav-container {
+    min-height: 68px;
+  }
+
+  .brand-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-text {
+    font-size: 18px;
+  }
+
+  .nav-actions .btn {
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding-block: 70px 55px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    margin-top: 38px;
+  }
+
+  .stat {
+    padding: 14px 7px;
+  }
+
+  .stat strong {
+    font-size: 20px;
+  }
+
+  .stat span {
+    font-size: 10px;
+  }
+
+  .section {
+    padding-block: 65px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-card {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .ai-content h2 {
+    font-size: 33px;
+  }
+
+  .ai-visual {
+    min-height: 210px;
+  }
+
+  .orbit-one {
+    width: 220px;
+    height: 100px;
+  }
+
+  .orbit-two {
+    width: 270px;
+    height: 130px;
+  }
+
+  .ai-core {
+    width: 105px;
+    height: 105px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 25px;
+    padding-block: 35px;
+  }
+
+  .footer-links {
+    gap: 10px 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .modal-box {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .ai-modal-subjects {
+    flex-direction: column;
+  }
+
+}
