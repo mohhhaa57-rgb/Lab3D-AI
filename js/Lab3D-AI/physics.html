@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Lab3D AI - مختبر الفيزياء التفاعلي ثلاثي الأبعاد">
+
+  <title>الفيزياء | Lab3D AI</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="container navbar-inner">
+
+      <a href="index.html" class="logo">
+        Lab3D <span>AI</span>
+      </a>
+
+      <button
+        id="mobileMenuBtn"
+        class="mobile-menu-btn"
+        aria-label="فتح القائمة">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav">
+
+        <a href="index.html">الرئيسية</a>
+
+        <a href="biology.html">الأحياء</a>
+
+        <a href="chemistry.html">الكيمياء</a>
+
+        <a href="physics.html" class="active">
+          الفيزياء
+        </a>
+
+        <a href="sources.html">المصادر</a>
+
+        <a href="profile.html">حسابي</a>
+
+      </nav>
+
+      <div class="navbar-actions">
+
+        <button
+          id="themeToggle"
+          class="icon-btn"
+          aria-label="تغيير المظهر">
+          🌙
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <main>
+
+    <section class="hero subject-hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="badge">
+            ⚡ مختبر الفيزياء
+          </span>
+
+          <h1>
+            اكتشف قوانين الفيزياء
+            <span>بتجربة ثلاثية الأبعاد</span>
+          </h1>
+
+          <p>
+            استكشف الحركة والجاذبية والمدارات والموجات
+            والظواهر الفيزيائية من خلال نماذج تفاعلية.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#physicsLab"
+              class="btn btn-primary">
+              🧪 ابدأ التجربة
+            </a>
+
+            <button
+              class="btn btn-secondary"
+              onclick="openModal('aiModal')">
+              🤖 اسأل AI Mentor
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AD
+    ========================== -->
+    <section class="ad-section">
+
+      <div class="container">
+
+        <div
+          class="ad-placeholder"
+          data-ad-network="google"
+          data-ad-slot="physics-top">
+
+          <span>إعلان</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         3D LAB
+    ========================== -->
+    <section
+      id="physicsLab"
+      class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            تجربة تفاعلية
+          </span>
+
+          <h2>
+            نموذج المدار والجاذبية
+          </h2>
+
+          <p>
+            حرّك النموذج وشاهد العلاقة بين الكتلة
+            والجاذبية والحركة المدارية.
+          </p>
+
+        </div>
+
+
+        <div class="model-viewer-card">
+
+          <div class="model-viewer-header">
+
+            <div>
+
+              <span class="model-category">
+                ⚡ Physics
+              </span>
+
+              <h3>
+                نظام مداري ثلاثي الأبعاد
+              </h3>
+
+            </div>
+
+            <span class="model-status">
+              ● تفاعلي
+            </span>
+
+          </div>
+
+
+          <div class="canvas-wrapper">
+
+            <canvas id="physicsCanvas"></canvas>
+
+            <div class="canvas-overlay">
+
+              <span>
+                اسحب للدوران
+              </span>
+
+              <span>
+                استخدم العجلة للتكبير
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="model-controls">
+
+            <button
+              id="physicsRotateToggle"
+              class="btn btn-secondary">
+              ⏸ إيقاف الدوران
+            </button>
+
+            <button
+              id="physicsReset"
+              class="btn btn-secondary">
+              🔄 إعادة ضبط
+            </button>
+
+            <button
+              id="savePhysicsModel"
+              class="btn btn-primary">
+              ⭐ حفظ النموذج
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INFORMATION
+    ========================== -->
+    <section class="section section-alt">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            معلومات النموذج
+          </span>
+
+          <h2>
+            كيف يعمل المدار؟
+          </h2>
+
+        </div>
+
+
+        <div class="info-grid">
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              🌍
+            </div>
+
+            <h3>
+              الجاذبية
+            </h3>
+
+            <p>
+              الجاذبية قوة تجذب الأجسام ذات الكتلة
+              نحو بعضها البعض.
+            </p>
+
+          </article>
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              🛰️
+            </div>
+
+            <h3>
+              السرعة المدارية
+            </h3>
+
+            <p>
+              تعتمد حركة الجسم في المدار على سرعته
+              والمسافة عن الجسم المركزي.
+            </p>
+
+          </article>
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              ⚖️
+            </div>
+
+            <h3>
+              الكتلة
+            </h3>
+
+            <p>
+              كلما زادت كتلة الجسم زادت قوة الجاذبية
+              الناتجة عنه.
+            </p>
+
+          </article>
+
+
+          <article class="info-card">
+
+            <div class="info-icon">
+              🔄
+            </div>
+
+            <h3>
+              الحركة
+            </h3>
+
+            <p>
+              المدار ينتج عن التوازن بين حركة الجسم
+              وقوة الجاذبية المؤثرة عليه.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PHYSICS LIBRARY
+    ========================== -->
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">
+            مكتبة الفيزياء
+          </span>
+
+          <h2>
+            نماذج فيزيائية تفاعلية
+          </h2>
+
+          <p>
+            مجموعة من النماذج التي يمكن إضافتها
+            إلى المختبر.
+          </p>
+
+        </div>
+
+
+        <div class="model-grid">
+
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🎯
+            </div>
+
+            <h3>
+              حركة المقذوفات
+            </h3>
+
+            <p>
+              دراسة المسار والسرعة وزاوية الإطلاق.
+            </p>
+
+            <span class="model-tag">
+              Mechanics
+            </span>
+
+          </article>
+
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🌌
+            </div>
+
+            <h3>
+              النظام الشمسي
+            </h3>
+
+            <p>
+              استكشاف حركة الكواكب حول الشمس.
+            </p>
+
+            <span class="model-tag">
+              Astronomy
+            </span>
+
+          </article>
+
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🌊
+            </div>
+
+            <h3>
+              الموجات
+            </h3>
+
+            <p>
+              فهم الطول الموجي والتردد والسعة.
+            </p>
+
+            <span class="model-tag">
+              Waves
+            </span>
+
+          </article>
+
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              🧲
+            </div>
+
+            <h3>
+              المجال المغناطيسي
+            </h3>
+
+            <p>
+              مشاهدة خطوط المجال المغناطيسي
+              حول المغناطيس.
+            </p>
+
+            <span class="model-tag">
+              Magnetism
+            </span>
+
+          </article>
+
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              ⚛️
+            </div>
+
+            <h3>
+              الذرة
+            </h3>
+
+            <p>
+              نموذج مبسط للتعرف على مكونات الذرة.
+            </p>
+
+            <span class="model-tag">
+              Atomic Physics
+            </span>
+
+          </article>
+
+
+          <article class="model-card">
+
+            <div class="model-card-icon">
+              ⏱️
+            </div>
+
+            <h3>
+              البندول
+            </h3>
+
+            <p>
+              دراسة الحركة الدورية وتأثير طول الخيط.
+            </p>
+
+            <span class="model-tag">
+              Motion
+            </span>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AI WARNING
+    ========================== -->
+    <section class="section">
+
+      <div class="container">
+
+        <div class="ai-warning">
+
+          <div class="ai-warning-icon">
+            ⚠️
+          </div>
+
+          <div>
+
+            <h3>
+              تنبيه مهم
+            </h3>
+
+            <p>
+              قد تنتج أخطاء عن الذكاء الاصطناعي لأنه
+              يديره الذكاء، يرجى التأكد من المعلومات
+              قدر الإمكان عند استخدام أي معلومة من الموقع.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AI MENTOR MODAL
+    ========================== -->
+    <div
+      id="aiModal"
+      class="modal"
+      aria-hidden="true">
+
+      <div class="modal-overlay"
+           onclick="closeModal('aiModal')">
+      </div>
+
+      <div class="modal-content">
+
+        <button
+          class="modal-close"
+          onclick="closeModal('aiModal')"
+          aria-label="إغلاق">
+          ×
+        </button>
+
+        <div class="modal-header">
+
+          <span class="modal-icon">
+            🤖
+          </span>
+
+          <div>
+
+            <h2>
+              AI Mentor
+            </h2>
+
+            <p>
+              مساعدك في فهم الفيزياء
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="aiMessages"
+          class="ai-messages">
+
+          <div class="ai-message ai-message-bot">
+
+            مرحبًا! 👋
+
+            <br><br>
+
+            أنا AI Mentor الخاص بالفيزياء.
+            يمكنك سؤالي عن الحركة والجاذبية
+            والطاقة والموجات وغيرها.
+
+          </div>
+
+        </div>
+
+
+        <div class="ai-input-area">
+
+          <textarea
+            id="aiInput"
+            rows="3"
+            maxlength="2000"
+            placeholder="اكتب سؤالك في الفيزياء...">
+          </textarea>
+
+          <button
+            id="aiSendBtn"
+            class="btn btn-primary">
+            إرسال 🚀
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <a href="index.html" class="logo">
+            Lab3D <span>AI</span>
+          </a>
+
+          <p>
+            مختبر تعليمي تفاعلي لاستكشاف
+            العلوم باستخدام الذكاء الاصطناعي
+            والنماذج ثلاثية الأبعاد.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            الأقسام
+          </h3>
+
+          <a href="biology.html">
+            الأحياء
+          </a>
+
+          <a href="chemistry.html">
+            الكيمياء
+          </a>
+
+          <a href="physics.html">
+            الفيزياء
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            الموقع
+          </h3>
+
+          <a href="sources.html">
+            المصادر
+          </a>
+
+          <a href="privacy.html">
+            سياسة الخصوصية
+          </a>
+
+          <a href="profile.html">
+            حسابي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Lab3D AI
+        </span>
+
+        <span>
+          تعليم • علوم • ذكاء اصطناعي
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       SCRIPTS
+  ========================== -->
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/models.js"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+  <!-- Physics -->
+  <script src="js/physics.js"></script>
+
+</body>
+</html>
