@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
   <meta charset="UTF-8">
 
@@ -8,104 +7,189 @@
         content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="مصادر وأصول مجانية ومفتوحة المصدر لمشروع Lab3D AI">
+        content="Lab3D AI — مركز علمي تفاعلي للذكاء الاصطناعي والعلوم الثلاثية الأبعاد">
 
-  <title>المصادر | Lab3D AI</title>
+  <title>Lab3D AI — مركز العلوم الذكي</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- مهم: style.css موجود بجانب index.html -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- ================= NAVBAR ================= -->
 
   <header class="navbar">
+    <div class="container nav-container">
 
-    <div class="container navbar-inner">
+      <a href="index.html" class="brand">
 
-      <a href="index.html" class="logo">
-        Lab3D <span>AI</span>
+        <span class="brand-icon">
+          <svg width="25" height="25"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+            <circle cx="12" cy="12" r="3"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4.5"/>
+            <ellipse cx="12" cy="12" rx="4.5" ry="10"/>
+          </svg>
+        </span>
+
+        <span class="brand-text">
+          <strong>Lab3D</strong>
+          <span>AI</span>
+        </span>
+
       </a>
 
-      <button
-        id="mobileMenuBtn"
-        class="mobile-menu-btn"
-        aria-label="فتح القائمة">
-        ☰
-      </button>
+      <nav class="nav-links">
 
-      <nav id="mainNav" class="main-nav">
-
-        <a href="index.html">
+        <a href="#home" class="active">
           الرئيسية
         </a>
 
-        <a href="biology.html">
-          الأحياء
+        <a href="#sciences">
+          العلوم
         </a>
 
-        <a href="chemistry.html">
-          الكيمياء
+        <a href="#ai">
+          الذكاء الاصطناعي
         </a>
 
-        <a href="physics.html">
-          الفيزياء
-        </a>
-
-        <a href="sources.html" class="active">
-          المصادر
-        </a>
-
-        <a href="profile.html">
-          حسابي
+        <a href="#features">
+          المميزات
         </a>
 
       </nav>
 
-      <div class="navbar-actions">
+      <div class="nav-actions">
 
         <button
+          class="icon-button"
           id="themeToggle"
-          class="icon-btn"
+          type="button"
           aria-label="تغيير المظهر">
-          🌙
+
+          <svg id="themeIcon"
+               width="19"
+               height="19"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="M4.93 4.93l1.41 1.41"/>
+            <path d="M17.66 17.66l1.41 1.41"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="M4.93 19.07l1.41-1.41"/>
+            <path d="M17.66 6.34l1.41-1.41"/>
+
+          </svg>
+
         </button>
+
+        <a href="#ai" class="btn btn-primary">
+          ابدأ الآن
+        </a>
 
       </div>
 
     </div>
-
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- ================= HERO ================= -->
 
-  <main>
+  <main id="home">
 
     <section class="hero">
 
-      <div class="container">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
 
-        <div class="hero-content">
+      <div class="container hero-content">
 
-          <span class="badge">
-            📚 مصادر مجانية
+        <div class="hero-badge">
+
+          <span></span>
+
+          منصة علمية مدعومة بالذكاء الاصطناعي
+
+        </div>
+
+        <h1>
+
+          اكتشف العلم
+
+          <br>
+
+          <span class="gradient-text">
+            بطريقة ثلاثية الأبعاد
           </span>
 
-          <h1>
-            مصادر علمية
-            <span>مفتوحة ومجانية</span>
-          </h1>
+        </h1>
 
-          <p>
-            مجموعة من المصادر والأدوات التي يمكن
-            استخدامها لتطوير المحتوى والنماذج
-            التعليمية في Lab3D AI.
-          </p>
+        <p class="hero-description">
+
+          مركز Lab3D AI يجمع بين الذكاء الاصطناعي
+          والنماذج التفاعلية ثلاثية الأبعاد لمساعدتك
+          على فهم الأحياء والكيمياء والفيزياء بطريقة
+          أكثر وضوحًا وتفاعلاً.
+
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#sciences"
+             class="btn btn-primary btn-large">
+
+            استكشف العلوم
+
+            <svg width="18"
+                 height="18"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
+              <path d="M5 12h14"/>
+              <path d="M13 6l6 6-6 6"/>
+
+            </svg>
+
+          </a>
+
+          <a href="#ai"
+             class="btn btn-secondary btn-large">
+
+            تحدث مع AI
+
+          </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+          <div class="stat">
+            <strong>3</strong>
+            <span>مجالات علمية</span>
+          </div>
+
+          <div class="stat">
+            <strong>3D</strong>
+            <span>نماذج تفاعلية</span>
+          </div>
+
+          <div class="stat">
+            <strong>AI</strong>
+            <span>مساعد علمي</span>
+          </div>
 
         </div>
 
@@ -114,489 +198,490 @@
     </section>
 
 
-    <!-- =========================
-         NOTICE
-    ========================== -->
+    <!-- ================= AD ================= -->
 
-    <section class="section">
+    <section class="ad-section">
+
+      <div class="container">
+
+        <div class="ad-placeholder">
+          مساحة إعلانية
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SCIENCES ================= -->
+
+    <section class="section"
+             id="sciences">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-label">
+            EXPLORE SCIENCE
+          </span>
+
+          <h2>
+            اختر مجالك العلمي
+          </h2>
+
+          <p>
+            استكشف المفاهيم العلمية من خلال
+            الشرح والنماذج التفاعلية.
+          </p>
+
+        </div>
+
+
+        <div class="subject-grid">
+
+
+          <!-- Biology -->
+
+          <a href="#biology"
+             class="subject-card biology-card">
+
+            <div class="subject-card-top">
+
+              <div class="subject-icon">
+
+                <svg width="30"
+                     height="30"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.6">
+
+                  <path d="M8 3c5 0 8 3 8 8s-3 10-8 10"/>
+                  <path d="M16 3c-5 0-8 3-8 8s3 10 8 10"/>
+                  <path d="M9 7h6"/>
+                  <path d="M8 12h8"/>
+                  <path d="M9 17h6"/>
+
+                </svg>
+
+              </div>
+
+              <span class="subject-number">
+                01
+              </span>
+
+            </div>
+
+            <div class="subject-content">
+
+              <span class="subject-en">
+                BIOLOGY
+              </span>
+
+              <h3>
+                الأحياء
+              </h3>
+
+              <p>
+                الخلايا، الأعضاء، DNA، الجهاز العصبي،
+                جسم الإنسان والكائنات الحية.
+              </p>
+
+              <span class="card-arrow">
+                ←
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- Chemistry -->
+
+          <a href="#chemistry"
+             class="subject-card chemistry-card">
+
+            <div class="subject-card-top">
+
+              <div class="subject-icon">
+
+                <svg width="30"
+                     height="30"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.6">
+
+                  <path d="M9 3v6l-5 8a3 3 0 0 0 2.5 4.5h11A3 3 0 0 0 20 17l-5-8V3"/>
+                  <path d="M7 13h10"/>
+                  <path d="M8 3h7"/>
+
+                </svg>
+
+              </div>
+
+              <span class="subject-number">
+                02
+              </span>
+
+            </div>
+
+            <div class="subject-content">
+
+              <span class="subject-en">
+                CHEMISTRY
+              </span>
+
+              <h3>
+                الكيمياء
+              </h3>
+
+              <p>
+                الذرات، الجزيئات، الروابط، التفاعلات
+                والعناصر والمركبات.
+              </p>
+
+              <span class="card-arrow">
+                ←
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- Physics -->
+
+          <a href="#physics"
+             class="subject-card physics-card">
+
+            <div class="subject-card-top">
+
+              <div class="subject-icon">
+
+                <svg width="30"
+                     height="30"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="1.6">
+
+                  <circle cx="12" cy="12" r="2.5"/>
+                  <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                  <ellipse cx="12" cy="12" rx="4" ry="10"/>
+                  <circle cx="20" cy="12" r="1.3"/>
+
+                </svg>
+
+              </div>
+
+              <span class="subject-number">
+                03
+              </span>
+
+            </div>
+
+            <div class="subject-content">
+
+              <span class="subject-en">
+                PHYSICS
+              </span>
+
+              <h3>
+                الفيزياء
+              </h3>
+
+              <p>
+                الحركة، الطاقة، الكهرباء، المغناطيسية،
+                الجاذبية والفيزياء الحديثة.
+              </p>
+
+              <span class="card-arrow">
+                ←
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= AI ================= -->
+
+    <section class="section ai-section"
+             id="ai">
+
+      <div class="container">
+
+        <div class="ai-card">
+
+          <div class="ai-background"></div>
+
+          <div class="ai-content">
+
+            <div class="ai-badge">
+
+              <span class="ai-status"></span>
+
+              LAB3D AI MENTOR
+
+            </div>
+
+            <h2>
+              اسأل الذكاء الاصطناعي
+              عن أي مفهوم علمي
+            </h2>
+
+            <p>
+
+              اطرح سؤالك باللغة العربية أو الإنجليزية،
+              واحصل على شرح مبسط ومفصل في الأحياء
+              والكيمياء والفيزياء.
+
+            </p>
+
+
+            <div class="ai-subjects">
+
+              <span>الأحياء</span>
+              <span>الكيمياء</span>
+              <span>الفيزياء</span>
+
+            </div>
+
+
+            <button
+              class="btn btn-primary btn-large"
+              id="openAI"
+              type="button">
+
+              ابدأ المحادثة
+
+              <svg width="18"
+                   height="18"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="2">
+
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-4-.9L3 20l1.4-4A8.5 8.5 0 1 1 21 11.5z"/>
+
+              </svg>
+
+            </button>
+
+          </div>
+
+
+          <div class="ai-visual">
+
+            <div class="ai-orbit orbit-one"></div>
+
+            <div class="ai-orbit orbit-two"></div>
+
+            <div class="ai-core">
+
+              AI
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="section"
+             id="features">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-label">
+            PLATFORM
+          </span>
+
+          <h2>
+            أكثر من مجرد شرح
+          </h2>
+
+          <p>
+            تجربة تعليمية تجمع بين الذكاء الاصطناعي
+            والتفاعل البصري.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+          <div class="feature-card">
+
+            <div class="feature-icon">
+
+              <svg width="23"
+                   height="23"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.7">
+
+                <circle cx="12" cy="12" r="8"/>
+                <path d="M12 8v4l3 2"/>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              شرح ذكي
+            </h3>
+
+            <p>
+              احصل على شرح يتناسب مع السؤال
+              والمفهوم الذي تريد فهمه.
+            </p>
+
+          </div>
+
+
+          <div class="feature-card">
+
+            <div class="feature-icon">
+
+              <svg width="23"
+                   height="23"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.7">
+
+                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/>
+                <path d="M4 7.5l8 4.5 8-4.5"/>
+                <path d="M12 12v9"/>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              نماذج ثلاثية الأبعاد
+            </h3>
+
+            <p>
+              شاهد المفاهيم العلمية بطريقة
+              بصرية وتفاعلية.
+            </p>
+
+          </div>
+
+
+          <div class="feature-card">
+
+            <div class="feature-icon">
+
+              <svg width="23"
+                   height="23"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.7">
+
+                <path d="M4 19V5"/>
+                <path d="M4 19h16"/>
+                <path d="M7 15l3-4 3 2 5-7"/>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              تعلم تفاعلي
+            </h3>
+
+            <p>
+              انتقل من القراءة النظرية إلى
+              مشاهدة المفهوم والتفاعل معه.
+            </p>
+
+          </div>
+
+
+          <div class="feature-card">
+
+            <div class="feature-icon">
+
+              <svg width="23"
+                   height="23"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.7">
+
+                <path d="M12 3v18"/>
+                <path d="M3 12h18"/>
+                <circle cx="12" cy="12" r="8"/>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              مصادر علمية
+            </h3>
+
+            <p>
+              الوصول إلى مصادر وكتب ومواد
+              تعليمية متاحة قانونيًا.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WARNING ================= -->
+
+    <section class="warning-section">
 
       <div class="container">
 
         <div class="ai-warning">
 
-          <div class="ai-warning-icon">
-            ℹ️
+          <div class="warning-icon">
+            !
           </div>
 
           <div>
 
-            <h3>
-              ملاحظة مهمة حول التراخيص
-            </h3>
+            <strong>
+              تنبيه مهم
+            </strong>
 
             <p>
-              قبل استخدام أي صورة أو نموذج أو ملف
-              في مشروعك، تحقق دائمًا من الترخيص
-              وشروط الاستخدام الخاصة بالمصدر.
-              كلمة "مجاني" لا تعني بالضرورة أن
-              جميع الاستخدامات التجارية مسموحة.
+              قد تنتج أخطاء عن الذكاء الاصطناعي لأنه يديره الذكاء،
+              يرجى التأكد من المعلومات قدر الإمكان عند استخدام
+              أي معلومة من الموقع.
             </p>
 
           </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SOURCES
-    ========================== -->
-
-    <section class="section section-alt">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            Open Source
-          </span>
-
-          <h2>
-            مصادر وأدوات مفيدة
-          </h2>
-
-          <p>
-            مصادر يمكن الرجوع إليها عند بناء
-            النماذج والمحتوى العلمي.
-          </p>
-
-        </div>
-
-
-        <div class="model-grid">
-
-
-          <!-- Three.js -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🧊
-            </div>
-
-            <span class="model-tag">
-              3D
-            </span>
-
-            <h3>
-              Three.js
-            </h3>
-
-            <p>
-              مكتبة JavaScript لإنشاء الرسومات
-              والنماذج ثلاثية الأبعاد باستخدام WebGL.
-            </p>
-
-            <a
-              href="https://threejs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- MDN -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              💻
-            </div>
-
-            <span class="model-tag">
-              Web
-            </span>
-
-            <h3>
-              MDN Web Docs
-            </h3>
-
-            <p>
-              مرجع شامل لتقنيات HTML وCSS وJavaScript
-              وتقنيات الويب الحديثة.
-            </p>
-
-            <a
-              href="https://developer.mozilla.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- Wikimedia -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🖼️
-            </div>
-
-            <span class="model-tag">
-              Media
-            </span>
-
-            <h3>
-              Wikimedia Commons
-            </h3>
-
-            <p>
-              مستودع ضخم للصور والوسائط التي تحمل
-              تراخيص مختلفة.
-            </p>
-
-            <a
-              href="https://commons.wikimedia.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- OpenStax -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              📖
-            </div>
-
-            <span class="model-tag">
-              Education
-            </span>
-
-            <h3>
-              OpenStax
-            </h3>
-
-            <p>
-              كتب تعليمية مفتوحة في العلوم والرياضيات
-              وغيرها من المجالات التعليمية.
-            </p>
-
-            <a
-              href="https://openstax.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- PhET -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              ⚡
-            </div>
-
-            <span class="model-tag">
-              Physics
-            </span>
-
-            <h3>
-              PhET Interactive Simulations
-            </h3>
-
-            <p>
-              محاكاة تفاعلية تعليمية في الفيزياء
-              والكيمياء وغيرها من العلوم.
-            </p>
-
-            <a
-              href="https://phet.colorado.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- PubChem -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              ⚗️
-            </div>
-
-            <span class="model-tag">
-              Chemistry
-            </span>
-
-            <h3>
-              PubChem
-            </h3>
-
-            <p>
-              قاعدة بيانات علمية للمعلومات المتعلقة
-              بالمواد والمركبات الكيميائية.
-            </p>
-
-            <a
-              href="https://pubchem.ncbi.nlm.nih.gov/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- NCBI -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🧬
-            </div>
-
-            <span class="model-tag">
-              Biology
-            </span>
-
-            <h3>
-              NCBI
-            </h3>
-
-            <p>
-              موارد وقواعد بيانات علمية متخصصة
-              في الأحياء والطب والعلوم الحيوية.
-            </p>
-
-            <a
-              href="https://www.ncbi.nlm.nih.gov/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-          <!-- NASA -->
-
-          <article class="model-card">
-
-            <div class="model-card-icon">
-              🚀
-            </div>
-
-            <span class="model-tag">
-              Space
-            </span>
-
-            <h3>
-              NASA
-            </h3>
-
-            <p>
-              موارد وصور وبيانات تعليمية مرتبطة
-              بالفضاء والفيزياء وعلوم الأرض.
-            </p>
-
-            <a
-              href="https://www.nasa.gov/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary">
-
-              زيارة المصدر
-
-            </a>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         LICENSE GUIDE
-    ========================== -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-kicker">
-            التراخيص
-          </span>
-
-          <h2>
-            انتبه إلى نوع الترخيص
-          </h2>
-
-        </div>
-
-
-        <div class="info-grid">
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              ✅
-            </div>
-
-            <h3>
-              Public Domain
-            </h3>
-
-            <p>
-              قد تكون المواد الموجودة في الملكية العامة
-              قابلة للاستخدام دون قيود حقوق نشر،
-              مع ضرورة التحقق من المصدر.
-            </p>
-
-          </article>
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              📜
-            </div>
-
-            <h3>
-              Creative Commons
-            </h3>
-
-            <p>
-              تراخيص Creative Commons لها شروط
-              مختلفة، مثل ذكر صاحب العمل أو
-              منع الاستخدام التجاري.
-            </p>
-
-          </article>
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              💡
-            </div>
-
-            <h3>
-              Open Source
-            </h3>
-
-            <p>
-              البرمجيات مفتوحة المصدر قد تسمح
-              بالتعديل وإعادة الاستخدام وفقًا
-              للرخصة المحددة للمشروع.
-            </p>
-
-          </article>
-
-
-          <article class="info-card">
-
-            <div class="info-icon">
-              ⚠️
-            </div>
-
-            <h3>
-              تحقق قبل الاستخدام
-            </h3>
-
-            <p>
-              راجع دائمًا صفحة الترخيص الأصلية
-              قبل استخدام أي محتوى في موقع
-              تجاري أو ربحي.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTRIBUTION
-    ========================== -->
-
-    <section class="section section-alt">
-
-      <div class="container">
-
-        <div class="cta-card">
-
-          <span class="badge">
-            🧪 Lab3D AI
-          </span>
-
-          <h2>
-            العلم أفضل عندما يكون متاحًا للجميع
-          </h2>
-
-          <p>
-            نهدف إلى جمع مصادر تعليمية وأدوات
-            مفتوحة تساعد على جعل تعلم العلوم
-            أكثر تفاعلية وسهولة.
-          </p>
-
-          <a
-            href="index.html"
-            class="btn btn-primary">
-
-            العودة إلى المختبر
-
-          </a>
 
         </div>
 
@@ -607,68 +692,177 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- ================= MODAL ================= -->
+
+  <div class="modal"
+       id="aiModal"
+       aria-hidden="true">
+
+    <div class="modal-overlay"
+         id="modalOverlay"></div>
+
+    <div class="modal-box">
+
+      <button
+        class="modal-close"
+        id="closeAI"
+        type="button"
+        aria-label="إغلاق">
+
+        ×
+
+      </button>
+
+
+      <div class="modal-header">
+
+        <div class="modal-icon">
+
+          <svg width="25"
+               height="25"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.7">
+
+            <circle cx="12" cy="12" r="3"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4.5"/>
+            <ellipse cx="12" cy="12" rx="4.5" ry="10"/>
+
+          </svg>
+
+        </div>
+
+        <div>
+
+          <h3>
+            Lab3D AI Mentor
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <p class="modal-description">
+
+        اكتب سؤالًا في الأحياء أو الكيمياء
+        أو الفيزياء.
+
+      </p>
+
+
+      <div class="ai-modal-subjects">
+
+        <button class="subject-select active"
+                type="button">
+          الأحياء
+        </button>
+
+        <button class="subject-select"
+                type="button">
+          الكيمياء
+        </button>
+
+        <button class="subject-select"
+                type="button">
+          الفيزياء
+        </button>
+
+      </div>
+
+
+      <textarea
+        id="questionInput"
+        class="input textarea"
+        placeholder="مثال: كيف تعمل الجاذبية؟"></textarea>
+
+
+      <button
+        id="askAI"
+        class="btn btn-primary btn-full"
+        type="button">
+
+        اسأل الذكاء الاصطناعي
+
+      </button>
+
+
+      <div id="aiResponse"
+           class="ai-response">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
 
   <footer class="footer">
 
     <div class="container">
 
-      <div class="footer-grid">
+      <div class="footer-main">
 
-        <div>
+        <div class="footer-brand">
 
-          <a href="index.html" class="logo">
-            Lab3D <span>AI</span>
+          <a href="index.html"
+             class="brand">
+
+            <span class="brand-icon">
+
+              <svg width="24"
+                   height="24"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.8">
+
+                <circle cx="12" cy="12" r="3"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4.5"/>
+                <ellipse cx="12" cy="12" rx="4.5" ry="10"/>
+
+              </svg>
+
+            </span>
+
+            <span class="brand-text">
+              <strong>Lab3D</strong>
+              <span>AI</span>
+            </span>
+
           </a>
 
           <p>
-            مختبر تعليمي تفاعلي لاستكشاف
-            العلوم باستخدام الذكاء الاصطناعي
+            مركز علمي تفاعلي يجمع الذكاء الاصطناعي
             والنماذج ثلاثية الأبعاد.
           </p>
 
         </div>
 
 
-        <div>
+        <div class="footer-links">
 
-          <h3>
-            الأقسام
-          </h3>
-
-          <a href="biology.html">
-            الأحياء
-          </a>
-
-          <a href="chemistry.html">
-            الكيمياء
-          </a>
-
-          <a href="physics.html">
-            الفيزياء
-          </a>
-
-        </div>
-
-
-        <div>
-
-          <h3>
-            الموقع
-          </h3>
-
-          <a href="index.html">
+          <a href="#home">
             الرئيسية
           </a>
 
-          <a href="profile.html">
-            حسابي
+          <a href="#sciences">
+            العلوم
           </a>
 
-          <a href="privacy.html">
-            سياسة الخصوصية
+          <a href="#ai">
+            الذكاء الاصطناعي
+          </a>
+
+          <a href="#features">
+            المميزات
+          </a>
+
+          <a href="#">
+            الخصوصية
           </a>
 
         </div>
@@ -679,11 +873,11 @@
       <div class="footer-bottom">
 
         <span>
-          © 2026 Lab3D AI
+          Lab3D AI © 2026
         </span>
 
         <span>
-          تعليم • علوم • ذكاء اصطناعي
+          الإبداع يبدأ من المعرفة
         </span>
 
       </div>
@@ -693,12 +887,178 @@
   </footer>
 
 
-  <!-- =========================
-       SCRIPTS
-  ========================== -->
+  <!-- ================= JAVASCRIPT ================= -->
 
-  <script src="js/config.js"></script>
-  <script src="js/app.js"></script>
+  <script>
+
+    /* تغيير المظهر */
+
+    const themeToggle =
+      document.getElementById("themeToggle");
+
+    const savedTheme =
+      localStorage.getItem("lab3d_theme");
+
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+    }
+
+    themeToggle.addEventListener("click", () => {
+
+      document.body.classList.toggle("light-mode");
+
+      const isLight =
+        document.body.classList.contains("light-mode");
+
+      localStorage.setItem(
+        "lab3d_theme",
+        isLight ? "light" : "dark"
+      );
+
+    });
+
+
+    /* فتح نافذة الذكاء الاصطناعي */
+
+    const aiModal =
+      document.getElementById("aiModal");
+
+    const openAI =
+      document.getElementById("openAI");
+
+    const closeAI =
+      document.getElementById("closeAI");
+
+    const modalOverlay =
+      document.getElementById("modalOverlay");
+
+
+    function openModal() {
+
+      aiModal.classList.add("show");
+
+      aiModal.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+    }
+
+
+    function closeModal() {
+
+      aiModal.classList.remove("show");
+
+      aiModal.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+    }
+
+
+    openAI.addEventListener(
+      "click",
+      openModal
+    );
+
+    closeAI.addEventListener(
+      "click",
+      closeModal
+    );
+
+    modalOverlay.addEventListener(
+      "click",
+      closeModal
+    );
+
+
+    /* أزرار المجالات */
+
+    const subjectButtons =
+      document.querySelectorAll(
+        ".subject-select"
+      );
+
+    subjectButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          subjectButtons.forEach(
+            item =>
+              item.classList.remove("active")
+          );
+
+          button.classList.add("active");
+
+        }
+      );
+
+    });
+
+
+    /* زر سؤال AI */
+
+    const askAI =
+      document.getElementById("askAI");
+
+    const questionInput =
+      document.getElementById("questionInput");
+
+    const aiResponse =
+      document.getElementById("aiResponse");
+
+
+    askAI.addEventListener(
+      "click",
+      () => {
+
+        const question =
+          questionInput.value.trim();
+
+        if (!question) {
+
+          aiResponse.textContent =
+            "اكتب سؤالك أولًا.";
+
+          return;
+
+        }
+
+        aiResponse.textContent =
+          "تم استلام سؤالك. سيتم ربط المساعد العلمي بالذكاء الاصطناعي في الخطوة القادمة.";
+
+      }
+    );
+
+
+    /* إغلاق النافذة بزر Escape */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+          closeModal();
+        }
+
+      }
+    );    /* إغلاق النافذة بزر Escape */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+          closeModal();
+        }
+
+      }
+    );
+
+  </script>
 
 </body>
-                </html>
+</html>
